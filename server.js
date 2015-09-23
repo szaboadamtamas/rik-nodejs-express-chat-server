@@ -6,6 +6,10 @@ var mongoose = require('mongoose');
 
 mongoose.connect(config.mongoUri);
 
+var passport = require('passport');
+
+app.use(passport.intialize());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
