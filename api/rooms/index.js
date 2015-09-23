@@ -61,3 +61,5 @@ app.delete('/:roomId', Auth.isAuthenticated, function (req, res, next) {
     res.json(result);
   });
 });
+
+app.use('/:roomId/messages', require('./messages'));
