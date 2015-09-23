@@ -8,9 +8,8 @@ app.use(bodyParser.json());
 
 var router = express.Router();
 
-router.get('/', function(req, res) {
-  res.json({ message: 'Hello world!' });
-});
+var api = require('./api');
+app.use('/api/v1', api);
 
 app.use('/', router);
 app.listen(config.port);
