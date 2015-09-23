@@ -7,6 +7,7 @@ app.get('/', function(req, res) {
   });
 });
 
+app.use('/account', require('./account'));
 app.use('/users', require('./users'));
 
 app.use(function(err, req, res, next) {
